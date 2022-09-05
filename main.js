@@ -54,6 +54,17 @@ Array(200).fill().forEach(addStar)
 const spaceTexture = new THREE.TextureLoader().load('./images/space.jpg')
 scene.background = spaceTexture
 
+// Avatar
+
+const jeraldTexture = new THREE.TextureLoader().load('./images/me.png')
+
+const jerald = new THREE.Mesh(
+  new THREE.BoxGeometry(3, 3, 3),
+  new THREE.MeshBasicMaterial({map: jeraldTexture})
+)
+
+scene.add(jerald)
+
 
 function animate(){
   requestAnimationFrame(animate)
