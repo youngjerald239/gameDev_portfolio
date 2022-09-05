@@ -81,7 +81,7 @@ const moon = new THREE.Mesh(
 scene.add(moon)
 
 moon.position.z = 30
-moon.position.setX(-10)
+moon.position.setX(-5)
 
 
 function moveCamera() {
