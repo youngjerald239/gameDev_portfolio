@@ -65,6 +65,23 @@ const jerald = new THREE.Mesh(
 
 scene.add(jerald)
 
+// Moon
+
+const moonTexture = new THREE.TextureLoader().load('./images/moon.jpg')
+
+
+const moon = new THREE.Mesh(
+  new THREE.SphereGeometry(3, 32, 32),
+  new THREE.MeshStandardMaterial({
+    map: moonTexture,
+  })
+)
+
+scene.add(moon)
+
+moon.position.z = 30
+moon.position.setX(-10)
+
 
 function animate(){
   requestAnimationFrame(animate)
